@@ -25,6 +25,8 @@ jobs:
       run: |
           go get -u .
           go get -u github.com/h2non/bimg
+          curl -s https://raw.githubusercontent.com/h2non/bimg/master/preinstall.sh | sudo bash -
+          
             
           
     - name: Build
