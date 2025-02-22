@@ -12,7 +12,7 @@ on:
 jobs:
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v4
 
@@ -25,7 +25,7 @@ jobs:
       run: |
           go get -u .
           go get -u github.com/h2non/bimg
-          curl -s https://raw.githubusercontent.com/h2non/bimg/master/preinstall.sh | sudo bash -
+          sudo apt install libvips-dev
           
             
           
